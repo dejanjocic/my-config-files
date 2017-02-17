@@ -1,0 +1,80 @@
+!----- xrdb -merge ~/.Xresources
+
+!
+!----- XTerm settings           
+!
+
+xterm*loginShell:      true
+xterm*vt100*geometry:  80x40
+xterm*font:            -*-terminus-medium-r-*-*-*-140-*-*-*-*-iso8859-1
+xterm*allowBoldFonts:  false
+xterm*cursorBlink:     true
+xterm*utf8:            1
+xterm*termName:        xterm-256color
+xterm*saveLines:       4096
+xterm*charClass:       33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+xterm*on3Clicks:       regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+xterm*VT100*translations: #override Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
+xterm*visualBell:      true
+xterm*bellIsUrgent:    true
+xterm*scrollTtyOutput: false
+xterm*scrollKey:       true
+xterm*fastScroll:      true
+xterm*cutNewline:      true
+xterm*highlightSelection: true
+xterm*eightBitInput:   false
+xterm*backarrowKey:    false
+
+!----- XTerm solarized dark                
+
+xterm*background:     #002b36
+xterm*foreground:     #839496
+xterm*cursorColor:    #93a1a1
+
+!----- XTerm solarized light
+
+!xterm*background:     #fdf6e3
+!xterm*foreground:     #657b83
+!xterm*cursorColor:    #596e75
+
+!----- XTerm solarized palette
+
+!----- black dark/light
+
+xterm*color0:         #073642
+xterm*color8:         #002b36
+
+!----- red dark/light
+
+xterm*color1:         #dc322f
+xterm*color9:         #cb4b16
+
+!----- green dark/light
+
+xterm*color2:         #859900
+xterm*color10:        #586e75
+
+!----- yellow dark/light
+
+xterm*color3:         #b58900
+xterm*color11:        #657b83
+
+!----- blue dark/light
+
+xterm*color4:         #268bd2
+xterm*color12:        #839496
+
+!----- magenta dark/light
+
+xterm*color5:         #d33682
+xterm*color13:        #6c71c4
+
+!----- cyan dark/light
+
+xterm*color6:         #2aa198
+xterm*color14:        #93a1a1
+
+!----- white dark/light
+
+xterm*color7:         #eee8d5
+xterm*color15:        #fdf6e3
