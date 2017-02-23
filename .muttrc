@@ -82,6 +82,7 @@ macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent messages"
 macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index gb "<change-folder>=[Gmail]/Bin<enter>" "Go to bin"
+macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all new as read"
 
 # Use abook with Mutt
 set query_command= "abook --mutt-query '%s'"
