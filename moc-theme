@@ -1,0 +1,34 @@
+# solarized dark theme
+
+background		= default	default
+frame			= black		default
+window_title		= white		black
+directory		= blue  	default bold
+selected_directory	= blue  	black   underline
+playlist		= blue		default bold
+selected_playlist	= blue  	black   underline
+file			= blue  	default bold
+selected_file		= blue		black   underline
+marked_file		= white		black
+marked_selected_file	= blue		black   underline
+info			= cyan		default
+status			= green 	default
+title			= white        	black
+state			= green 	default
+current_time		= green 	default
+time_left		= cyan		default
+total_time		= cyan		default
+time_total_frames	= green 	default
+sound_parameters	= cyan		default
+legend			= green 	default
+disabled		= blue  	default bold
+enabled			= blue  	black
+empty_mixer_bar		= green		default
+filled_mixer_bar	= black		green
+empty_time_bar		= green		default
+filled_time_bar		= black		green
+entry			= green 	default
+entry_title		= green		default
+error			= red		default
+message			= green 	default
+plist_time		= green 	default
