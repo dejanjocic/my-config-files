@@ -28,7 +28,7 @@ xterm*backarrowKey:    false
 !----- XTerm solarized dark                
 
 xterm*background:     #002b36
-xterm*foreground:     #839496
+xterm*foreground:     ##657b83
 xterm*cursorColor:    #93a1a1
 
 !----- XTerm solarized light
