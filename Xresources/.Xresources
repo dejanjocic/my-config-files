@@ -6,7 +6,7 @@
 
 xterm*loginShell:      true
 xterm*vt100*geometry:  80x40
-xterm*font:            terminus-14
+xterm*font:            -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
 xterm*allowBoldFonts:  false
 xterm*cursorBlink:     true
 xterm*utf8:            1
