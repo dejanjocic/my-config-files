@@ -33,5 +33,5 @@ image/tiff;     feh %s
 image/xbm;      feh %s
 image/xcf;      feh %s
 image/xwd;      feh %s
-image/yuv       feh %s
+image/yuv;      feh %s
 
