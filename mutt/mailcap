@@ -2,3 +2,36 @@
 text/html;      firefox %s; test=test -n "$DISPLAY"; nametemplate=%s.html
 text/html;      links %s; nametemplate=%s.html
 text/html;      links -dump %s; nametemplate=%s.html; copiousoutpu
+
+# For images
+image/bmp;      feh %s
+image/cgm;      feh %s
+image/dl;       feh %s
+image/dvi;      feh %s
+image/emf;      feh %s
+image/eps;      feh %s
+image/gif;      feh %s
+image/jpeg;     feh %s
+image/jpg;      feh %s
+image/JPG;      feh %s
+image/mng;      feh %s
+image/pbm;      feh %s
+image/pcx;      feh %s
+image/pdf;      feh %s
+image/pgm;      feh %s
+image/png;      feh %s
+image/PNG;      feh %s
+image/ppm;      feh %s
+image/pps;      feh %s
+image/ppsx;     feh %s
+image/ps;       feh %s
+image/svg;      feh %s
+image/svgz;     feh %s
+image/tga;      feh %s
+image/tif;      feh %s
+image/tiff;     feh %s
+image/xbm;      feh %s
+image/xcf;      feh %s
+image/xwd;      feh %s
+image/yuv       feh %s
+
