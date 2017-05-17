@@ -305,4 +305,7 @@ color listfocus_unread  black   yellow
 color info              default black
 color article           default default
 
+bind-key j next
+bind-key k prev
+
 # EOF
