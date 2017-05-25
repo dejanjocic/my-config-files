@@ -1,0 +1,24 @@
+# Gmail info
+set imap_user           = "jodejka@gmail.com"
+set imap_pass           = ""
+set from                = "Dejan Jocic <jodejka@gmail.com>"
+set imap_keepalive      = 30
+unset imap_passive                                                     # allow mutt to open new imap connection automatically
+set folder              = "imaps://imap.gmail.com"
+set spoolfile           = "+INBOX"
+set postponed           = "+[Gmail]/Drafts"
+set record              = "+[Gmail]/Sent Mail"
+set trash               = "+[Gmail]/Bin"
+set mbox                ="imaps://imap.gmail.com/[Gmail]/All Mail"
+set header_cache        = ~/.mutt/jodejka/cache/headers
+set message_cachedir    = ~/.mutt/jodejka/cache/bodies
+set certificate_file    = ~/.mutt/jodejka/certificates
+set smtp_url            = "smtp://jodejka@smtp.gmail.com:587"
+set smtp_pass           = ""
+set move                = no                                           # Don't ask me to move messages out of my inbox when I quit.
+
+#set folder             = ~/Mail                                       # mailbox location
+#set tmpdir             = "/tmp"
+#set record             = "+sent" 
+#set mbox               = "+mbox"
+#set postponed          = "+postponed"
