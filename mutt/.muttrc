@@ -62,6 +62,8 @@ unset markers                                                          # In the 
 # Gmail macros
 bind index G imap-fetch-mail
 bind editor <space> noop
+# For contextual change of folders with multiple accounts
+macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
 macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
 #macro index,pager d "<save-message>=[Gmail]/Bin<enter><enter>" "Trash"
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
