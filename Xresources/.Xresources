@@ -7,6 +7,12 @@
 xterm*loginShell:      true
 xterm*vt100*geometry:  80x40
 xterm*font:            -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-1
+xterm*font1:           -*-fixed-medium-*-*-*-10-*-*-*-*-*-iso8859-1
+xterm*font2:           -*-fixed-medium-*-*-*-12-*-*-*-*-*-iso8859-1
+xterm*font3:           -*-fixed-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+xterm*font4:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+xterm*font5:           -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso8859-1
+xterm*font6:           -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-1
 xterm*allowBoldFonts:  false
 xterm*cursorBlink:     true
 xterm*utf8:            1
