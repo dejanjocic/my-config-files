@@ -21,8 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# because I'm too lazy to type /sbin/ and /usr/sbin/
-PATH=$PATH:/usr/sbin:/sbin
+# because I'm too lazy to type /sbin/ and /usr/sbin/ and /usr/local/sbin
+PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 
 # for solarized tty colors
 source $HOME/Downloads/tty-solarized-master/tty-solarized-dark.sh
