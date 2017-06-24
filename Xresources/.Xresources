@@ -17,6 +17,7 @@ xterm*font4:           -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-1
 xterm*font5:           -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-1
 xterm*font6:           -misc-fixed-medium-r-normal-*-18-120-100-100-c-90-iso10646-1 
 xterm*allowBoldFonts:  false
+xterm*dynamicColors:   true
 xterm*cursorBlink:     true
 xterm*utf8:            1
 xterm*termName:        xterm-256color
