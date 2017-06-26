@@ -1,0 +1,2 @@
+# For mplayer
+alias mplayercp='mplayer -subcp cp1250'
