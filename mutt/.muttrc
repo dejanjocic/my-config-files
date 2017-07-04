@@ -11,7 +11,7 @@ folder-hook 'jodejka.gmail1' 'source ~/.mutt/jodejka.gmail1'
 folder-hook 'dejan.gmail2' 'source ~/.mutt/dejan.gmail2'
 
 # Default account
-source ~/.mutt/jodejka.gmail1
+#source ~/.mutt/jodejka.gmail1
 
 # Macros for switching accounts
 macro index g1 '<sync-mailbox><enter-command>source ~/.mutt/jodejka.gmail1<enter><change-folder>!<enter>'
