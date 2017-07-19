@@ -4,4 +4,8 @@
 # # enabled if there is no hardstatus setting for your terminal)
 hardstatus on
 hardstatus alwayslastline
-hardstatus string "%{.yw}%-w%{.yk}%n %t%{-}%+w %=%{..k} %H %{..k} %D %d/%m %C%a "
+hardstatus string "%{.yk}%-w%{.yw}%n %t%{-}%+w %=%{..k} %H %{..k} %D %d/%m %C%a "
+
+# For mouse tracking of split windows
+mousetrack on
+
