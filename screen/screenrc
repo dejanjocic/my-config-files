@@ -9,3 +9,6 @@ hardstatus string "%{.yk}%-w%{.yw}%n %t%{-}%+w %=%{..k} %H %{..k} %D %d/%m %C%a 
 # For mouse tracking of split windows
 mousetrack on
 
+# For 256 colors
+term screen-256color
+
