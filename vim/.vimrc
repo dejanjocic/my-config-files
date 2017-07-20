@@ -124,3 +124,12 @@ set spell spelllang=en_us
 " For status line
 set statusline=%F%m%r%h%w\ %y\ line\ %l,%v[%p%%]\ of\ %L
 set laststatus=2
+
+" For autoindent 4 space width
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" For 256 colors
+set t_Co=256
