@@ -89,19 +89,35 @@ xterm*backarrowKey:    false
 *pointerColorBackground:  S_base01
 *pointerColorForeground:  S_base1
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color8:                  S_base03
-*color9:                  S_orange
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+! black dark/light
+xterm*color0:                  S_base02
+xterm*color8:                  S_base03
+
+! red dark/light
+xterm*color1:                  S_red
+xterm*color9:                  S_orange
+
+! green dark/light
+xterm*color2:                  S_green
+xterm*color10:                 S_base01
+
+! yellow dark/light
+xterm*color3:                  S_yellow
+xterm*color11:                 S_base00
+
+! blue dark/light
+xterm*color4:                  S_blue
+xterm*color12:                 S_base0
+
+! magenta dark/light
+xterm*color5:                  S_magenta
+xterm*color13:                 S_violet
+
+! cyan dark/light
+xterm*color6:                  S_cyan
+xterm*color14:                 S_base1
+
+! white dark/light
+xterm*color7:                  S_base2
+xterm*color15:                 S_base3
+
