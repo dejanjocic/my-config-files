@@ -32,11 +32,18 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
+# start gnome-terminal
+bindsym $mod+g exec gnome-terminal
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+
+# as alternative, use gmrun
+bindsym $mod+a exec gmrun
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -58,7 +65,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move righ
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -72,13 +79,18 @@ bindsym $mod+n split h
 # split in vertical orientation
 bindsym $mod+v split v
 
+# split toggle
+bindsym $mod+b split toggle
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# change container layout (stacked, tabbed, toggle split toggle between
+# all)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle all
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -87,34 +99,51 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+set $workspace1 "1 "
+set $workspace2 "2 "
+set $workspace3 "3 "
+set $workspace4 "4 "
+set $workspace5 "5 "
+set $workspace6 "6 "
+set $workspace7 "7 "
+set $workspace8 "8 "
+set $workspace9 "9 "
+set $workspace10 "10 "
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -131,10 +160,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -149,42 +178,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# For mouse settings
+# for mouse focus window
 focus_follows_mouse no
 
-# For colours
-
-set $bg-colour        #2f343f
-set $in-bg-colour     #2f343f
-set $text-colour      #f3f4f5
-set $in-text-colour   #676e7d
-set $urgent-bg-colour #e53935
-
-# Window colours
-#                       border              background        text             indicator
-client.focused          $bg-colour          $bg-colour        $text-colour     $bg-colour
-client.unfocused        $in-bg-colour       $in-bg-colour     $in-text-colour  $bg-colour
-client.focused_inactive $in-bg-colour       $in-bg-colour     $in-text-colour  $bg-colour
-client.urgent           $urgent-bg-colour   $urgent-bg-colour $text-colour     $bg-colour
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
-        colors {
-                background $bg-colour
-                separator  #757575
-                #                  border            background        text
-                focused_workspace  $bg-colour        $bg-colour        $text-colour
-                inactive_workspace $in-bg-colour     $in-bg-colour     $in-text-colour
-                urgent_workspace   $urgent-bg-colour $urgent-bg-colour $text-colour
-               }
-        tray_output primary
-}
-
-#for i3lock
-bindsym $mod+shift+x exec i3lock --color "bg-colour"
+# for i3lock
+bindsym $mod+Shift+x exec i3lock --color 475263
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -195,16 +193,60 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# Touchpad controls
+# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# For wallpaper
-exec_always feh --bg-scale /home/dejan/Pictures/RAVE-Cube-Wallpaper-Collection-X1/RAVE-Sweet-RAVE.jpg
+# Set of colors, arc like theme
+set $bg-color 	         #353945
+set $inactive-bg-color   #353945
+set $text-color          #f5f6f7
+set $inactive-text-color #5C616C
+set $urgent-bg-color     #E53935
+set $indicator-color     #5294e2
 
-# For compositing window manager
-exec_always compton -f
+# Window colors
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          $indicator-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color
 
-# For synapse
-exec synapse
+# Start i3bar to display a workspace bar (plus the system information i3blocks
+# finds out, if available)
+bar {
+    position top
+  	status_command i3blocks -c /home/dejan/.config/i3/i3blocks.conf
+	colors {
+		   background $bg-color
+	       separator #757575
+           #                  border             background         text 
+           focused_workspace  $bg-color          $bg-color          $text-color
+		   inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		   urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	}
+}
+
+
+# Startup
+
+# To set wallpaper
+# exec_always feh --bg-scale /home/dejan/Pictures/wallpaper1.png
+
+# For solid background
+xsetroot -solid #06415c
+
+# For keyboard
+exec "setxkbmap -layout us,rs,rs,us"
+exec "setxkbmap -variant ,latinalternatequotes,alternatequotes,"
+exec "setxkbmap -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'"
+
+
+
+# For compositing with compton
+exec --no-startup-id compton -f --no-fading-openclose
