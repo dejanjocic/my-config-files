@@ -240,6 +240,7 @@ bar {
 
 # For solid background
 xsetroot -solid #06415c
+# xsetroot -solid #26515f
 
 # For keyboard
 exec "setxkbmap -layout us,rs,rs,us"
