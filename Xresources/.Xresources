@@ -23,7 +23,8 @@ xterm*utf8:            1
 xterm*termName:        xterm-256color
 xterm*saveLines:       4096
 xterm*charClass:       33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-xterm*on3Clicks:       regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+!xterm*on3Clicks:       regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+xterm*on3Clicks:       line
 xterm*VT100*translations: #override Shift <Btn1Up>: exec-formatted("firefox '%t'", PRIMARY)
 xterm*visualBell:      true
 xterm*bellIsUrgent:    true
