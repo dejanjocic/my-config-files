@@ -39,6 +39,8 @@ filetype plugin indent on    " required
 
 
 
+
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -154,3 +156,10 @@ set expandtab
 
 " For 256 colors
 set t_Co=256
+
+" For python3 and python mode
+let g:pymode_python = 'python3'
+
+" For autocompletion
+set complete+=k
+
