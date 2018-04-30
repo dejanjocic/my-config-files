@@ -35,3 +35,5 @@ image/xcf;      display %s
 image/xwd;      display %s
 image/yuv;      display %s
 
+#for PDF
+application/pdf; pdftohtml -q -stdout %s | w3m -T text/html; copiousoutput
