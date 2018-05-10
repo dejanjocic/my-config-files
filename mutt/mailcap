@@ -38,3 +38,10 @@ image/yuv;      display %s
 #for PDF
 application/pdf; pdftotext '%s' -; copiousoutput; description=PDF Document; nametemplate=%s.pdf
 
+#for damn M$ doc files
+application/msword; antiword '%s'; copiousoutput; description=Word Document; nametemplate=%s.doc
+
+application/doc; antiword '%s'; copiousoutput; description=Word Document; nametemplate=%s.doc
+
+
+
