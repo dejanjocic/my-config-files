@@ -52,6 +52,10 @@ set mailcap_path        = ~/.mutt/mailcap                              # needed 
 auto_view text/html                                                    # autoview html
 alternative_order text/plain text/enriched text/html                   # save html for last 
 
+set mime_forward=yes
+set mime_forward_rest=yes                                              # to forward message including attachments
+
+
 set pager_index_lines   = 10                                           # number of index lines to show
 set pager_context       = 5                                            # When going to the next page, keep the bottom two lines of this page on top so that I have some context
 set pager_stop          = yes                                          # If I'm at the end of a message and I try to go to the next page, don't move me to the next message
